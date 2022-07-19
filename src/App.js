@@ -5,9 +5,9 @@ function App() {
   return (
     <React.Fragment>
       <Header />
-      <main>
+      {/*<main>
         <Meals />
-      </main>
+  </main>*/}
     </React.Fragment>
   );
 }

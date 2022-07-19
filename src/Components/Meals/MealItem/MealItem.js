@@ -19,3 +19,5 @@ const MealItem = (props) => {
     </li>
   );
 };
+
+export default MealItem;
