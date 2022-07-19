@@ -22,13 +22,18 @@
   display: flex;
   align-items: center;
   border: 15px;
+  max-width: 500px;
 }
 .searchBar{
   border-radius: 20px;
   opacity: 50%;
-  width: 150px;
-  height:50px;
+  width:100%;
+  min-width: 3REM;
+  height:3rem;
   margin:7px
+}
+ .searchBar::placeholder {
+  color: #878d96;
 }
 
   .main-image img {

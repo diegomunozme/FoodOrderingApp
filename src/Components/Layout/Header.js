@@ -9,7 +9,7 @@ const Header = (props) => {
       <navbar className={classes.header}>
         <left className={classes.left} >
         <h1 className={classes.title}>Hashback LLC</h1>
-        <input className={classes.searchBar} defaultValue="Search"/>
+        <input className={classes.searchBar} placeholder="Search"/>
         </left>
         <HeaderCartButton />
       </navbar>
