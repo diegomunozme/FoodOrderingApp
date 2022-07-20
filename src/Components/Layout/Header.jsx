@@ -4,8 +4,8 @@ import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton";
 const Header = (props) => {
   return (
-    <React.Fragment>
-       
+    <div>
+    <container className={classes.container}>
       <navbar className={classes.header}>
         <left className={classes.left} >
         <h1 className={classes.title}>Hashback LLC</h1>
@@ -13,8 +13,8 @@ const Header = (props) => {
         </left>
         <HeaderCartButton />
       </navbar>
-      
-    </React.Fragment>
+    </container>
+    </div>
   );
 };
 

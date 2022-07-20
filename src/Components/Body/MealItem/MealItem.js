@@ -1,5 +1,5 @@
 import React from "react";
-import Meals from "../Meals";
+import Meals from "../Body";
 import classes from "./MealItem.module.css"
 
 const MealItem = (props) => {

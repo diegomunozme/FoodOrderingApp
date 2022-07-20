@@ -1,9 +1,15 @@
+.container{
+  height: 10vh;
+  padding: 10px;
+  display: flex;
+}
+
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 5rem;
+    height: 10vh;
     background-color: #121619;;
     color: white;
     display: flex;
@@ -13,6 +19,7 @@
     box-shadow: #121619;
     z-index: 10;
   }
+
 .title{
   font-family: 'Times New Roman', Times, serif;
 }
@@ -35,11 +42,3 @@
  .searchBar::placeholder {
   color: #878d96;
 }
-
-  .main-image img {
-    width: 100%;
-    height: 100%;
-    opacity: 10%;
-    object-fit: cover;
-    transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
-  }
