@@ -1,8 +1,7 @@
 import React from "react";
-import appleImg from "../../assets/meals.jpg";
 import classes from "./Header.module.css";
 import HeaderCartButton from "./HeaderCartButton";
-const Header = (props) => {
+const Header = () => {
   return (
     <div>
     <container className={classes.container}>
