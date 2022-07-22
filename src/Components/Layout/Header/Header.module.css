@@ -1,5 +1,5 @@
 .container{
-  height: 10vh;
+  height: 5rem;
   display: flex;
 }
 
@@ -16,10 +16,12 @@
     align-items: center;
     box-shadow: #121619;
     z-index: 10;
+    
   }
 
 .title{
   font-family: 'Times New Roman', Times, serif;
+  padding-left: 15px;
 }
 
 .left{
@@ -28,6 +30,14 @@
   align-items: center;
   /*border: 15px;*/
   max-width: 500px;
+}
+.right{
+  flex: 1;
+  display: flex;
+  align-items: center;
+  /*border: 15px;*/
+  margin-left: 23rem;
+  object-fit: cover;
 }
 .searchBar{
   border-radius: 20px;
