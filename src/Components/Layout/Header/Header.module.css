@@ -22,6 +22,7 @@
 .title{
   font-family: 'Times New Roman', Times, serif;
   padding-left: 15px;
+  margin: 16px;
 }
 
 .left{
@@ -29,7 +30,7 @@
   display: flex;
   align-items: center;
   /*border: 15px;*/
-  max-width: 500px;
+  width: 56vw;
 }
 .right{
   flex: 1;
@@ -40,18 +41,10 @@
   object-fit: cover;
 }
 .searchBar{
-  border-radius: 20px;
+  background-color: #343a3f;
+  border-radius: 15px;
   opacity: 50%;
-  width:100%;
-  min-width: 3REM;
-  height:3rem;
+  height:auto;
+  border-color: #00000000;
 }
-.searchBar:hover,
-
-.searchBar:active{
-    background-color: #A2A9B0;
-    transition: 1s;
-}
- .searchBar::placeholder {
-  color: #878d96;
-}
+.searchBar:hover
