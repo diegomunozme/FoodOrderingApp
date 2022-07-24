@@ -1,12 +1,12 @@
 import React from "react";
-import classes from "./CategoriesButton.module.css";
+import classes from "./ExploreButton.module.css";
 
 const HeaderCartButton = (props) => {
   const handleClick = {
   };
   return (
     <button className={classes.button} onClick={handleClick}>
-      <span>Categories</span>
+    <span>Explore</span>
     </button>
   );
 };
