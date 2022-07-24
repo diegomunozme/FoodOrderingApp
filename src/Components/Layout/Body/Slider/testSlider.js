@@ -1,20 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import classes from "./Slider.module.css";
-import Card from "../../../UI/Modal/Card/Card"
+import Card from "../../../UI/Modal/Card/Card";
 import UA from "../../../../assets/UA.jpg";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import { SliderData } from "./SliderData";
 
-
-const Slider = (props) => {
+const TestSlider = () => {
+  const [slideIndex, setSlideIndex] = useState(0);
+  const handleClick = (direction) => {
+    if (direction === "left") {
+      setSlideIndex(slideIndex > 0 ? slideIndex - 1 : 2);
+    } else {
+      setSlideIndex(slideIndex < 2 ? slideIndex + 1 : 0);
+    }
+  };
   return (
     <slider>
-      <section className={classes.image} />
-      <arrow
-        className={classes.arrowL}
-        style={{
-          left: `${(props) => props.direction === "left" && "10px"}`,
-        }}
-      >
+      {SliderData.map((slide,index) => {
+        return (
+            <img src={slide.image}/>
+        );
+      })} 
+      <arrow className={classes.arrowL}>
         <ChevronLeftIcon />
       </arrow>
       <div className={classes.content}>
@@ -39,4 +46,4 @@ const Slider = (props) => {
   );
 };
 
-export default Slider;
+export default TestSlider;

@@ -1,9 +1,6 @@
-import React, { useState } from "react";
-import Card from "../../UI/Modal/Card/Card";
+import React from "react";
 import classes from "./Body.module.css";
-import UA from "../../../assets/UA.jpg";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
-import Slider from "./MealItem/Slider";
+import Slider from "./Slider/Slider";
 
 const Body = () => {
   return (
