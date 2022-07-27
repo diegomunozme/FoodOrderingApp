@@ -2,15 +2,13 @@ import React from "react";
 
 import classes from "./ConnectToBChain.module.css";
 
-const HeaderCartButton = (props) => {
-  const handleClick = {
+const ConnectToBChain = () => {
   
-  };
   return (
-    <button className={classes.button} onClick={handleClick}>
+    <button className={classes.button}>
       <span>Connect</span>
     </button>
   );
 };
 
-export default HeaderCartButton;
+export default ConnectToBChain;

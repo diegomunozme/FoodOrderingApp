@@ -15,11 +15,11 @@ const Slider = () => {
     }
   };
   return (
-    <slider>
-      <section className={classes.image} />
-      <arrow className={classes.arrowL}>
+    <div>
+      <div className={classes.image} />
+      <div className={classes.arrowL}>
         <ChevronLeftIcon />
-      </arrow>
+      </div>
       <div className={classes.content}>
         <div className={classes.leftCard}>
           <h1 className={classes.leftMainText}>
@@ -35,10 +35,10 @@ const Slider = () => {
           <img src={UA} className={classes.rightCard} />
         </Card>
       </div>
-      <arrow className={classes.arrowR}>
+      <div className={classes.arrowR}>
         <ChevronRightIcon />
-      </arrow>
-    </slider>
+      </div>
+    </div>
   );
 };
 

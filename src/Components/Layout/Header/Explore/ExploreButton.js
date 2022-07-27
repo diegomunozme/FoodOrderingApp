@@ -2,7 +2,8 @@ import React from "react";
 import classes from "./ExploreButton.module.css";
 
 const HeaderCartButton = (props) => {
-  const handleClick = {
+  const handleClick = ()=> {
+   console.log('trial');
   };
   return (
     <button className={classes.button} onClick={handleClick}>

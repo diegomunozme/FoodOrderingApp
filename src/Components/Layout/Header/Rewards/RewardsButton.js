@@ -1,9 +1,11 @@
 import React from "react";
 import classes from "./RewardsButton.module.css";
 
-const RButton = (props) => {
-  const handleClick = {
-  };
+const RewardsButton = (props) => {
+  const handleClick = ()=> {
+    console.log('trial');
+   };
+
   return (
     <button className={classes.button} onClick={handleClick}>
     <span>Rewards</span>
@@ -11,4 +13,4 @@ const RButton = (props) => {
   );
 };
 
-export default RButton;
+export default RewardsButton;

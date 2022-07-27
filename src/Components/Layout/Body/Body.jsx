@@ -5,9 +5,9 @@ import Slider from "./Slider/Slider";
 const Body = () => {
   return (
     <div className={classes.container}>
-      <overlay className={classes.overlay}>
+      <div className={classes.overlay}>
         <Slider/>
-      </overlay>
+      </div>
     </div>
   );
 };
