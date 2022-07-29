@@ -2,13 +2,13 @@ import React from "react";
 
 import classes from "./ConnectToBChain.module.css";
 
-const ConnectToBChain = () => {
-  
+const ConnectToBChain = (props) => {
   return (
-    <button className={classes.button}>
-      <span>Connect</span>
-    </button>
+      <button className={classes.button} onClick={props.onClick}>
+        <span>Connect</span>
+      </button>
+    
   );
 };
 
-export default ConnectToBChain;
+export { ConnectToBChain };

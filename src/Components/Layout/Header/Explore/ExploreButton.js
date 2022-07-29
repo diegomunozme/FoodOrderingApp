@@ -1,15 +1,17 @@
 import React from "react";
 import classes from "./ExploreButton.module.css";
 
-const HeaderCartButton = (props) => {
-  const handleClick = ()=> {
-   console.log('trial');
+const CButton = (props) => {
+  const handleClick = () => {
+    console.log("trial");
   };
   return (
-    <button className={classes.button} onClick={handleClick}>
-    <span>Explore</span>
-    </button>
+    <div>
+      <button className={classes.button} onClick={handleClick}>
+        <span>Explore</span>
+      </button>
+    </div>
   );
 };
 
-export default HeaderCartButton;
+export default CButton;

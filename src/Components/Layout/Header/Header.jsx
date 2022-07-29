@@ -1,32 +1,25 @@
 import React, { useState } from "react";
 import classes from "./Header.module.css";
-import ConnectToBChain from "./ConnectToBChain";
+import { ConnectToBChain } from "./ConnectToBChain";
 import CButton from "./Explore/ExploreButton";
 import RewardsButton from "./Rewards/RewardsButton";
 import InputChakra from "../../UI/InputChakra/InputChakra";
-import UserAuth from "../PopUp/UserAuth";
+import LoginPopUp from "../LoginPopUp/LoginPopUp";
 
 const Header = () => {
-  const [login, setLogin] = useState("");
+  const [login, setLogin] = useState(true);
 
-  const handleLogin = () => {
-    console.log("HandleSignInPOPUP");
-    setLogin({})
+  const handleSetLogin = (e) => {
+    e.preventDefault();
+    setLogin(false);
   };
 
-  const loginModuleHandler = () => {
-    setLogin(null);
-  };
+  const loginModuleHandler= ()=>{
+    setLogin(true);
+  }
 
   return (
     <div>
-      {login && (
-        <UserAuth
-          title="Welcome Users!"
-          message="Login with Gmail or create username and password if needed!"
-          onConfirm={loginModuleHandler}
-        />
-      )}
       <div className={classes.container}>
         <div className={classes.header}>
           <div className={classes.left}>
@@ -34,10 +27,11 @@ const Header = () => {
             <InputChakra />
           </div>
           <div className={classes.right}>
+            {login ? <LoginPopUp/> : null}
             <CButton />
-            <RewardsButton onClick={() => handleLogin} />
-            <CButton />
-            <ConnectToBChain />
+            <RewardsButton onClick={loginModuleHandler}/>
+            <CButton/>
+            <ConnectToBChain onClick={handleSetLogin}/>
           </div>
         </div>
       </div>
