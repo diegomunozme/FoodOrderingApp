@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React from "react";
 import classes from "./Header.module.css";
 import { ConnectToBChain } from "./ConnectToBChain";
 import CButton from "./Explore/ExploreButton";
 import RewardsButton from "./Rewards/RewardsButton";
 import InputChakra from "../../UI/InputChakra/InputChakra";
-import LoginPopUp from "../LoginPopUp/LoginPopUp";
 
-const Header = () => {
-  const [login, setLogin] = useState(true);
+const Header = (props) => {
+  // const [login, setLogin] = useState(true);
 
-  const handleSetLogin = (e) => {
-    e.preventDefault();
-    setLogin(false);
-  };
+  // const handleSetLogin = (e) => {
+  //   e.preventDefault();
+  //   setLogin(false);
+  // };
 
-  const loginModuleHandler= ()=>{
-    setLogin(true);
-  }
+  // const loginModuleHandler= ()=>{
+  //   setLogin(true);
+  // };
+   
 
   return (
     <div>
@@ -26,12 +26,12 @@ const Header = () => {
             <h3 className={classes.title}>Hashback LLC</h3>
             <InputChakra />
           </div>
+          {/* {login ? <LoginPopUp/> : null}; */}
           <div className={classes.right}>
-            {login ? <LoginPopUp/> : null}
             <CButton />
-            <RewardsButton onClick={loginModuleHandler}/>
+            <RewardsButton onClick={props.loginModuleHandler}/>
             <CButton/>
-            <ConnectToBChain onClick={handleSetLogin}/>
+            <ConnectToBChain onClick={props.handleSetLogin}/>
           </div>
         </div>
       </div>
