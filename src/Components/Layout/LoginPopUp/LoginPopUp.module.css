@@ -1,16 +1,16 @@
 .backdrop {
-    position: relative;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: 50;
+    z-index: 1000;
     background: rgba(0, 0, 0, 0.75);
   }
   
   .modal {
-    position: relative;
-    top: 30vh;
+    position: fixed;
+    top: 20vh;
     left: 10%;
     width: 80%;
     z-index: 10000;

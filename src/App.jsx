@@ -18,7 +18,7 @@ function App() {
 
   return (
     <div>
-      {login && (<LoginPopUp />: null)};
+      {login && <LoginPopUp loginModuleHandler={loginModuleHandler} />};
       <div className={classes.background}>
         <Header
           handleSetLogin={handleSetLogin}
