@@ -6,30 +6,26 @@ import RewardsButton from "./Rewards/RewardsButton";
 import InputChakra from "../../UI/InputChakra/InputChakra";
 
 const Header = (props) => {
-  // const [login, setLogin] = useState(true);
 
-  // const handleSetLogin = (e) => {
-  //   e.preventDefault();
-  //   setLogin(false);
-  // };
-
-  // const loginModuleHandler= ()=>{
-  //   setLogin(true);
-  // };
-   
+  
+  
 
   return (
     <div>
       <div className={classes.container}>
         <div className={classes.header}>
           <div className={classes.left}>
-            <h3 className={classes.title}>Hashback LLC</h3>
+            <h3 className={classes.title}>Hashback</h3>
             <InputChakra />
           </div>
           {/* {login ? <LoginPopUp/> : null}; */}
           <div className={classes.right}>
             <CButton />
-            <RewardsButton onClick={props.loginModuleHandler}/>
+            <RewardsButton
+            // onMouseEnter={()=>{console.log('trial')}}
+
+            onClick={props.handleAccSetLogin}
+            />
             <CButton/>
             <ConnectToBChain onClick={props.handleSetLogin}/>
           </div>

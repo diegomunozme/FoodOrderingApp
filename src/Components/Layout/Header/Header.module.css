@@ -20,7 +20,7 @@
   }
 
 .title{
-  font-family: 'Times New Roman', Times, serif;
+  font: inherit;
   padding-left: 15px;
   margin: 16px;
 }
