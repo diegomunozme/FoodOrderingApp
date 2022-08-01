@@ -1,6 +1,7 @@
 import React from "react";
 import Card from "../../UI/Modal/Card/Card";
 import classes from "./LoginPopUp.module.css";
+import FirebaseApp from "../Header/Firebase-UI/FirebaseApp";
 
 const LoginPopUp = (props) => {
   return (
@@ -11,7 +12,8 @@ const LoginPopUp = (props) => {
           <h2>Login or Register Today!!</h2>
         </header>
         <div className={classes.content}>
-          <p>Login info here</p>
+          {/* Lets see what happens here */}
+          <FirebaseApp/>
         </div>
       </Card>
     </div>
