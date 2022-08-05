@@ -6,7 +6,7 @@ import Register from "./Register";
 const FirebaseApp = () => {
   
   return (
-    <div className="app">
+    <div >
       <Router>
         <Routes>
           <Route exact path="/" element={<Login/>}/>

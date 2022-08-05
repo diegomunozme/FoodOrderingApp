@@ -8,6 +8,7 @@ import {
 } from "../../../../firebase/firebase";
 
 import classes from "./Register.module.css";
+import googleLogo from "../../../../assets/googleLogo.jpg";
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -28,6 +29,7 @@ const Register = () => {
   return (
     <div className={classes.register}>
       <div className={classes.register__container}>
+        <div className={classes.loginRegisterName}>Full Name</div>
         <input
           type="text"
           className={classes.register__textBox}
@@ -35,13 +37,15 @@ const Register = () => {
           onChange={(e) => setName(e.target.value)}
           placeholder="Full Name"
         />
+        <div className={classes.loginRegisterEmail}>Email Address</div>
         <input
           type="text"
-          className="register__textBox"
+          className={classes.register__textBox}
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           placeholder="E-mail Address"
         />
+        <div className={classes.loginRegisterPassword}>Password</div>
         <input
           type="text"
           className={classes.register__textBox}
@@ -53,16 +57,23 @@ const Register = () => {
           {" "}
           Register
         </button>
-        <button className={classes.register__btn && classes.register__google} onClick={signInWithGoogle}>
-          {" "}
-          Register with Google
+        <div className={classes.seperator}></div>
+        <button className={classes.register__google} onClick={signInWithGoogle}>
+          <div>
+            <img
+              src={googleLogo}
+              alt="placeholder"
+              style={{display: "inline"}}
+            />
+            Register with Google
+          </div>
         </button>
         <div>
-            Already Have an Account?? <Link to="/">Login</Link>
+          Already Have an Account?? <Link to="/">Login</Link>
         </div>
       </div>
     </div>
   );
 };
 
-export default Register; 
+export default Register;

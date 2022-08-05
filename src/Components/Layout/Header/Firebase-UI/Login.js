@@ -7,6 +7,8 @@ import {
 } from "../../../../firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import classes from "./Login.module.css";
+
+import googleLogo from "../../../../assets/googleLogo.jpg"
  
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -46,6 +48,11 @@ const Login = () => {
           Login
         </button>
         <button className={classes.login__google} onClick={signInWithGoogle}>
+        <img
+              src={googleLogo}
+              alt="placeholder"
+              style={{display: "inline"}}
+            />
           Login With Google
         </button>
         <div>

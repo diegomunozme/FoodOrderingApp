@@ -8,8 +8,8 @@ const LoginPopUp = (props) => {
     <div>
       <div className={classes.backdrop} onClick={props.loginModuleHandler} />
       <Card className={classes.modal}>
-        <header>
-          <h2>Login or Register Today!!</h2>
+        <header className={classes.header}>
+          <h2>Sign In</h2>
         </header>
         <div className={classes.content}>
           {/* Lets see what happens here */}

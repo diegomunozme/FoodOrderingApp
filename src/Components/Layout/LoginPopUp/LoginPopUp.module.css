@@ -25,11 +25,13 @@
   }
   
   .header {
-    background: #4f005f;
     padding: 1rem;
+    text-align: center;
   }
   
   .header h2 {
+    font-family: stag;
+    font-size: 32px;
     margin: 0;
     color: white;
   }
