@@ -7,14 +7,13 @@ const FirebaseApp = () => {
   
   return (
     <div >
-      <Router>
-        <Routes>
+      <Routes>
           <Route exact path="/" element={<Login/>}/>
-          <Route exact path="/register" element={<Register/>}/>
+          <Route exact path="register" element={<Register/>}/>
           <Route exact path="/reset" element={<Reset/>}/>
           <Route exact path="/dashboard" element={<Dashboard/>}/>
+        {/* </Routes>*/}
         </Routes>
-      </Router>
     </div>
   );
 };

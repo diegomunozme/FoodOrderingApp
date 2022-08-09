@@ -6,10 +6,6 @@ import RewardsButton from "./Rewards/RewardsButton";
 import InputChakra from "../../UI/InputChakra/InputChakra";
 
 const Header = (props) => {
-
-  
-  
-
   return (
     <div>
       <div className={classes.container}>
@@ -20,14 +16,9 @@ const Header = (props) => {
           </div>
           {/* {login ? <LoginPopUp/> : null}; */}
           <div className={classes.right}>
+            <RewardsButton />
             <CButton />
-            <RewardsButton
-            // onMouseEnter={()=>{console.log('trial')}}
-
-            onClick={props.handleAccSetLogin}
-            />
-            <CButton/>
-            <ConnectToBChain onClick={props.handleSetLogin}/>
+            <ConnectToBChain onClick={props.handleSetLogin} />
           </div>
         </div>
       </div>

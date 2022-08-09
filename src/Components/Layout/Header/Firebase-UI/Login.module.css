@@ -23,14 +23,29 @@
     background-color: white;
 }
 
-.login__btn {
-    padding: 10px;
-    font-size: 18px;
-    margin-bottom: 10px;
-    border:none;
+
+.header h2 {
+    font-family: stag;
+    font-size: 32px;
+    padding-bottom: 5vh;
     color: white;
+  }
+
+.login__btn {
     background-color: black;
-}
+    color: white;
+    padding: 15px;
+    border-radius: 15px;
+   }
+
+.seperator{
+    width: 100%; 
+    text-align: center; 
+    border-bottom: 1px solid #000; 
+    line-height: 0.1em;
+    margin: 10px 0 20px; 
+    padding: 10px;
+ } 
 
 .login__google{
     background-color: white;
@@ -40,4 +55,19 @@
 
 .login div {
     margin-top: 7px;
+}
+
+
+.loginPassword{
+    text-align: left;
+}
+
+
+.loginEmail{
+    text-align: left;
+}
+
+.registerLink{
+    cursor: pointer;
+    text-underline-position: below;
 }

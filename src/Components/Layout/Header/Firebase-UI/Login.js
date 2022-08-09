@@ -8,9 +8,9 @@ import {
 import { useAuthState } from "react-firebase-hooks/auth";
 import classes from "./Login.module.css";
 
-import googleLogo from "../../../../assets/googleLogo.jpg"
- 
-const Login = () => {
+import googleLogo from "../../../../assets/googleLogo.jpg";
+
+const Login = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [user, loading, error] = useAuthState(auth);
@@ -23,9 +23,17 @@ const Login = () => {
     //if (user) navigate("./dashboard");
   }, [user, loading]);
 
+  const trial = ()=>{
+    console.log('e')
+  }
+
   return (
     <div className={classes.login}>
       <div className={classes.login__container}>
+        <header className={classes.header}>
+          <h2>Sign In</h2>
+        </header>
+        <div className={classes.loginEmail}>Email Address</div>
         <input
           type="text"
           className={classes.login__textBox}
@@ -33,7 +41,7 @@ const Login = () => {
           onChange={(e) => setEmail(e.target.value)}
           placeholder="E-Mail Address"
         />
-
+        <div className={classes.loginPassword}>Password</div>
         <input
           type="password"
           className={classes.login__textBox}
@@ -47,19 +55,27 @@ const Login = () => {
         >
           Login
         </button>
+        <div className={classes.seperator} />
         <button className={classes.login__google} onClick={signInWithGoogle}>
-        <img
-              src={googleLogo}
-              alt="placeholder"
-              style={{display: "inline"}}
-            />
+          <img
+            src={googleLogo}
+            alt="placeholder"
+            style={{ display: "inline" }}
+          />
           Login With Google
         </button>
         <div>
-            <Link to="/reset">Forgot Password</Link>
+          <Link to="/reset">Forgot Password</Link>
         </div>
         <div>
-            Don't have an account?? <Link to="/register">Register</Link> now.
+          Don't have an account??
+          <div
+            className={classes.registerLink}
+            // onClick={props.handleSetRegister}
+          >
+            {" "}
+            <u onClick={props.handleSetRegister}>Register now.</u>
+          </div>
         </div>
       </div>
     </div>

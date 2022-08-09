@@ -50,6 +50,13 @@
     justify-content: center;
 }
 
+.header h2 {
+    font-family: stag;
+    font-size: 32px;
+    padding-bottom: 5vh;
+    color: white;
+  }
+
 .register div{
     margin-top: 7px;
 }

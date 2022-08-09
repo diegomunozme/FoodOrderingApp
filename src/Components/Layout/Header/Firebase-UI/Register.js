@@ -29,6 +29,9 @@ const Register = () => {
   return (
     <div className={classes.register}>
       <div className={classes.register__container}>
+      <header className={classes.header}>
+        <h2>Register Today</h2>
+      </header>
         <div className={classes.loginRegisterName}>Full Name</div>
         <input
           type="text"
