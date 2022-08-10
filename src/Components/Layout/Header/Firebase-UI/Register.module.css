@@ -21,6 +21,10 @@
     background-color: white;
 }
 
+.loginLink{
+    cursor: pointer;
+    text-underline-position: below;
+}
 .register__btn{
     background-color: black;
     color: white;

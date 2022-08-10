@@ -12,7 +12,7 @@ const RegisterModal = (props) => {
       <Card className={classes.modal}>
         <div className={classes.content}>
           {/* Lets see what happens here */}
-          <Register/>
+          <Register handleSetLogin={props.handleSetLogin} />
         </div>
       </Card>
     </div>

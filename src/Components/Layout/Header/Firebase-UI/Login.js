@@ -7,7 +7,7 @@ import {
 } from "../../../../firebase/firebase";
 import { useAuthState } from "react-firebase-hooks/auth";
 import classes from "./Login.module.css";
-
+import RegisterModal from "../../RegisterModal/RegisterModal";
 import googleLogo from "../../../../assets/googleLogo.jpg";
 
 const Login = (props) => {
@@ -73,7 +73,7 @@ const Login = (props) => {
             className={classes.registerLink}
             // onClick={props.handleSetRegister}
           >
-            {" "}
+            {" "} 
             <u onClick={props.handleSetRegister}>Register now.</u>
           </div>
         </div>

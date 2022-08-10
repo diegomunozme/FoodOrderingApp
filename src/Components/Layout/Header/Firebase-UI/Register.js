@@ -10,7 +10,7 @@ import {
 import classes from "./Register.module.css";
 import googleLogo from "../../../../assets/googleLogo.jpg";
 
-const Register = () => {
+const Register = (props) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [name, setName] = useState("");
@@ -29,9 +29,9 @@ const Register = () => {
   return (
     <div className={classes.register}>
       <div className={classes.register__container}>
-      <header className={classes.header}>
-        <h2>Register Today</h2>
-      </header>
+        <header className={classes.header}>
+          <h2>Register Today</h2>
+        </header>
         <div className={classes.loginRegisterName}>Full Name</div>
         <input
           type="text"
@@ -66,13 +66,16 @@ const Register = () => {
             <img
               src={googleLogo}
               alt="placeholder"
-              style={{display: "inline"}}
+              style={{ display: "inline" }}
             />
             Register with Google
           </div>
         </button>
         <div>
-          Already Have an Account?? <Link to="/">Login</Link>
+          Already Have an Account?
+          <div className={classes.loginLink}>
+            <u onClick={props.handleSetLogin}>Login</u>
+          </div>
         </div>
       </div>
     </div>

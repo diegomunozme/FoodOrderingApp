@@ -18,7 +18,7 @@ const Header = (props) => {
           <div className={classes.right}>
             <RewardsButton />
             <CButton />
-            <ConnectToBChain onClick={props.handleSetLogin} />
+            <ConnectToBChain handleSetRegister={props.handleSetRegister} onClick={props.handleSetLogin} />
           </div>
         </div>
       </div>
