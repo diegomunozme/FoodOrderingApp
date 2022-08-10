@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Header from "./Components/Layout/Header/Header";
 import Body from "./Components/Layout/Body/Body";
@@ -8,18 +8,19 @@ import LoginPopUp from "./Components/Layout/LoginPopUp/LoginPopUp";
 import ExploreCategories from "./Components/Layout/Header/Explore/ExplorePage/ExploreCategories";
 import RegisterModal from "./Components/Layout/RegisterModal/RegisterModal";
 
-
 function App() {
   const [login, setLogin] = useState(false);
   const [register, setRegister] = useState(false);
 
   const handleSetLogin = (e) => {
     e.preventDefault();
+    setRegister(false);
     setLogin(true);
   };
 
   const handleSetRegister = (e) => {
     e.preventDefault();
+    setLogin(false);
     setRegister(true);
   };
 
@@ -35,8 +36,20 @@ function App() {
     <div>
       <Router>
         {/* <Routes> */}
-        {login && <LoginPopUp loginModuleHandler={loginModuleHandler} />};
-        {register && <RegisterModal registerModuleHandler={registerModuleHandler} />};
+        {login && (
+          <LoginPopUp
+            loginModuleHandler={loginModuleHandler}
+            handleSetRegister={handleSetRegister}
+          />
+        )}
+        ;
+        {register && (
+          <RegisterModal
+            handleSetLogin={handleSetLogin}
+            registerModuleHandler={registerModuleHandler}
+          />
+        )}
+        ;
         <div className={classes.background}>
           <Header
             handleSetRegister={handleSetRegister}
@@ -44,7 +57,6 @@ function App() {
             handleSetLogin={handleSetLogin}
             loginModuleHandler={loginModuleHandler}
           />
-          {/* <Body /> */}
           <Routes>
             <Route
               exact
