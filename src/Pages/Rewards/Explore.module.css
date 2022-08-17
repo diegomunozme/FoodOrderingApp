@@ -1,0 +1,34 @@
+.exploreMainContent{
+    height: 100vh;
+    color: white;
+    border-style: solid;
+    text-align: center;
+    
+}
+.exploreTitle{
+    font-size: 4vh;
+}
+.displayModals{
+    position: relative;
+    color: white;
+}
+
+.exploreCard{
+    max-height:10vh;
+    margin: 2ch;
+}
+.hottestDealsGrid{
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
+.allCompanies{
+    padding: 1cm;
+    display: flex;
+    position: relative;
+    border-radius: 15px;
+    align-items: center;
+    justify-content: center;
+}
