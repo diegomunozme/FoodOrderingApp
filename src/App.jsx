@@ -7,6 +7,7 @@ import Footer from "./Components/Layout/Footer/Footer";
 import LoginPopUp from "./Components/Layout/LoginPopUp/LoginPopUp";
 import ExploreCategories from "./Components/Layout/Header/Explore/ExplorePage/ExploreCategories";
 import RegisterModal from "./Components/Layout/RegisterModal/RegisterModal";
+import Explore from "./Pages/Rewards/Explore";
 
 function App() {
   const [login, setLogin] = useState(false);
@@ -64,6 +65,15 @@ function App() {
               element={
                 <>
                   <Body />
+                </>
+              }
+            />
+            <Route
+              exact
+              path="/Explore"
+              element={
+                <>
+                  <Explore />
                 </>
               }
             />

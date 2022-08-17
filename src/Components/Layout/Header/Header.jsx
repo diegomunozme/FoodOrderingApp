@@ -4,6 +4,7 @@ import { ConnectToBChain } from "./ConnectToBChain";
 import CButton from "./Explore/ExploreButton";
 import RewardsButton from "./Rewards/RewardsButton";
 import InputChakra from "../../UI/InputChakra/InputChakra";
+import { Link } from "react-router-dom";
 
 const Header = (props) => {
   return (
@@ -11,14 +12,26 @@ const Header = (props) => {
       <div className={classes.container}>
         <div className={classes.header}>
           <div className={classes.left}>
-            <h3 className={classes.title}>Hashback</h3>
+            <div>
+              <Link to="/">
+                <h3 className={classes.title}>Hashback</h3>
+              </Link>
+            </div>
             <InputChakra />
           </div>
           {/* {login ? <LoginPopUp/> : null}; */}
           <div className={classes.right}>
-            <RewardsButton />
-            <CButton />
-            <ConnectToBChain handleSetRegister={props.handleSetRegister} onClick={props.handleSetLogin} />
+            <Link to="/Rewards">
+              <RewardsButton />
+            </Link>
+            <Link to="/Explore">
+              <CButton />
+            </Link>
+
+            <ConnectToBChain
+              handleSetRegister={props.handleSetRegister}
+              onClick={props.handleSetLogin}
+            />
           </div>
         </div>
       </div>
