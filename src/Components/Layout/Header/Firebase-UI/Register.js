@@ -8,7 +8,7 @@ import {
 } from "../../../../firebase/firebase";
 
 import classes from "./Register.module.css";
-import googleLogo from "../../../../assets/googleLogo.jpg";
+import googleLogo from "../../../../assets/images/googleLogo.jpg";
 
 const Register = (props) => {
   const [email, setEmail] = useState("");

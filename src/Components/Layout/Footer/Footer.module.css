@@ -3,7 +3,7 @@
     position: absolute;
     display: grid;
     grid-template-columns: .5fr .5fr .5fr;
-    bottom: 1;
+    z-index: 1;
     width: 100%;
     color:white;
     background-color: #121619;

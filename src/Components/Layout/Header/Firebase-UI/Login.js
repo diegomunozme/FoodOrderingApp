@@ -8,7 +8,7 @@ import {
 import { useAuthState } from "react-firebase-hooks/auth";
 import classes from "./Login.module.css";
 import RegisterModal from "../../RegisterModal/RegisterModal";
-import googleLogo from "../../../../assets/googleLogo.jpg";
+import googleLogo from "../../../../assets/images/googleLogo.jpg";
 
 const Login = (props) => {
   const [email, setEmail] = useState("");

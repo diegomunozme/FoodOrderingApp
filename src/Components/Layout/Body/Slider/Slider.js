@@ -1,7 +1,7 @@
 import React from "react";
 import classes from "./Slider.module.css";
 import Card from "../../../UI/Modal/Card/Card";
-import UA from "../../../../assets/hbLogo.jpg";
+import UA from "../../../../assets/images/hbLogo.jpg";
 import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
 
 const Slider = () => {
