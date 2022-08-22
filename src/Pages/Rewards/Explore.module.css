@@ -1,111 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
 .exploreMainContent {
-  height: 150vh;
+  height: 100%;
   color: white;
   border-style: solid;
   text-align: center;
 }
+
 .exploreTitle {
   font-size: 4vh;
 }
-.displayModals {
-  position: relative;
-  color: white;
+
+.productsBox{
+    padding-inline-start: 10%;
+    padding-inline-end: 10%;
 }
 
-.exploreCard {
-  max-height: 10vh;
-  margin: 2ch;
-}
-.hottestDealsGrid {
-  display: flex;
-  position: relative;
-  border-radius: 15px;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-}
-.allCompanies {
-  padding: 1cm;
-  display: flex;
-  position: relative;
-  border-radius: 15px;
-  align-items: center;
-  justify-content: center;
-}
+.productsContainer {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  row-gap: 16px;
+  @media screen and (min-width: 600px){
+    column-gap: 16px;
+  }
 
-.allCompaniesImages {
-  /* height: 40%; */
-  justify-content: center;
-  display: flex;
-  position: relative;
-  object-fit: contain;
 }
-
-.Info {
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 3;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: all 0.2s ease;
-  cursor: pointer;
-}
-
 .Container {
   flex: 1;
   margin: 5px;
-  min-width: 280px;
-  height: 350px;
-  display: flex;
+  min-width: 25%;
+  height: 90px;
+  display: inline-flex;
+  position: relative;
+  background-color: transparent;
+  position: relative;
+  border-radius: 5px;
   align-items: center;
-  justify-content: center;
-  position: relative;
-  background-color: #f5fbfd;
-  position: relative;
-  border-radius: 15px;
+  -webkit-box-align: center;
 }
 .Container:hover {
   opacity: 1;
+  cursor: pointer;
 }
 
 .Circle {
-  width: 200px;
-  height: 200px;
-  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  border-radius: 10%;
   background-color: #f5fbfd;
-  position: absolute;
+  position: static;
+  opacity: 1;
 }
 
 .Image {
-  height: 40%;
+  height: 50%;
   z-index: 2;
   border-radius: 15px;
+  position: absolute;
   justify-content: center;
-}
-
-.Icon {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  background-color: white;
-  display: flex;
+  overflow: hidden;
   align-items: center;
-  justify-content: center;
-  margin: 10px;
-  transition: all 0.5s ease;
-  /* &:hover {
-    background-color: #e9f5f5;
-    transform: scale(1.1);
-  } */
 }
 
-.productsContainer{
-    display: flex;
-    padding: 20px;
-    flex-wrap: wrap;
-    justify-content: space-between;
+.productText{
+    padding: 10px;
+    font-weight: 600;
+
 }
