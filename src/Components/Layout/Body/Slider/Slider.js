@@ -18,8 +18,7 @@ const Slider = () => {
             Earn Crypto, <br /> All While Shopping <br/> Your Favorite Brands!
           </h1>
           <p className={classes.leftPText}>
-            Buy NFTs (or sell 'em) to earn rewards. Explore the market to get
-            started.
+            Earn up to 10% cashback on certain brands, and soon actively earn % on liquidity pools!
           </p>
         </div>
         <Card>

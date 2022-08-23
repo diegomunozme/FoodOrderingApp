@@ -44,8 +44,8 @@ export const products = [
     },
     {
         id:9, 
-        img: require("./images/shein.jpg"),
-        title:'Shein',
+        img: require("./images/Adidas.jpg"),
+        title:'Adidas',
         deal: 'New Addition'
 
     },

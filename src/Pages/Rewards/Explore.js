@@ -2,6 +2,10 @@ import React from "react";
 import classes from "./Explore.module.css";
 import { products } from "../../assets/data";
 
+const openInNewTab = (url) => {
+  window.open(url, "_blank", "noopener,noreferrer");
+};
+
 const Explore = () => {
   return (
     <div>
@@ -11,10 +15,22 @@ const Explore = () => {
           <div className={classes.productsBox}>
             <div className={classes.productsContainer}>
               {products.map((item) => (
-                <div className={classes.Container}>
-                  <div className={classes.Circle} />
-                  <img src={item.img} key={item.id} className={classes.Image} />
-                  <div className={classes.productText}>{item.title}</div>
+                <div
+                  onClick={() => openInNewTab("https://google.com")}
+                  className={classes.Container}
+                >
+                  <div className={classes.Circle}>
+                    <img
+                      src={item.img}
+                      key={item.id}
+                      className={classes.Image}
+                      alt="none"
+                    />
+                  </div>
+                  <div>
+                    <div className={classes.productText}>{item.title}</div>
+                    <div className={classes.productDesc}>{item.deal}</div>
+                  </div>
                 </div>
               ))}
             </div>

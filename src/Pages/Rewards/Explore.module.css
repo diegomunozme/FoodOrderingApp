@@ -5,13 +5,15 @@
 .exploreMainContent {
   height: 100%;
   color: white;
-  border-style: solid;
-  text-align: center;
 }
 
 .exploreTitle {
   font-size: 4vh;
+  padding-bottom: 5vh;
+  text-align: center;
 }
+
+
 
 .productsBox{
     padding-inline-start: 10%;
@@ -23,22 +25,23 @@
   grid-template-columns: repeat(2, 1fr);
   row-gap: 16px;
   @media screen and (min-width: 600px){
-    column-gap: 16px;
+    column-gap: 20px;
   }
-
 }
+
+
 .Container {
   flex: 1;
   margin: 5px;
   min-width: 25%;
   height: 90px;
-  display: inline-flex;
+  display: flex;
   position: relative;
   background-color: transparent;
   position: relative;
   border-radius: 5px;
   align-items: center;
-  -webkit-box-align: center;
+  
 }
 .Container:hover {
   opacity: 1;
@@ -50,22 +53,34 @@
   height: 100px;
   border-radius: 10%;
   background-color: #f5fbfd;
-  position: static;
-  opacity: 1;
-}
+  position: relative;
+  overflow: hidden;
+  padding: var(--space-small);
+  -webkit-box-flex: 0;
+  margin: 0;
+  display: block;
+} 
 
 .Image {
-  height: 50%;
+  height: 100%;
+  width: 100%;
   z-index: 2;
   border-radius: 15px;
-  position: absolute;
-  justify-content: center;
+  position:absolute;
   overflow: hidden;
+  display: block;
   align-items: center;
+  overflow: hidden;
+
 }
 
 .productText{
-    padding: 10px;
+    padding-left: 10px;
     font-weight: 600;
-
 }
+.productDesc{
+    padding-left:10px;
+    font-weight: 600;
+    color: #68D391;
+}
+
