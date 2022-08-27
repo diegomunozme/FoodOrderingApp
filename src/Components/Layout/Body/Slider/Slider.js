@@ -1,32 +1,44 @@
 import React from "react";
 import classes from "./Slider.module.css";
 import Card from "../../../UI/Modal/Card/Card";
-import UA from "../../../../assets/images/hbLogo.jpg";
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
+import HB from "../../../../assets/images/hbLogo.jpg";
+import tron from "../../../../assets/images/synthwaveArt.jpg";
+import { products } from "../../../../assets/data";
 
+const openInNewTab = (url) => {
+  window.open(url, "_blank", "noopener,noreferrer");
+};
 const Slider = () => {
   return (
     <div>
-      <div className={classes.image} />
-      <div className={classes.arrowL}>
-        <ChevronLeftIcon />
-      </div>
-      <div className={classes.content}>
-        <div className={classes.leftCard}>
-          <h1 className={classes.leftMainText}>
-            Save Money, <br />
-            Earn Crypto, <br /> All While Shopping <br/> Your Favorite Brands!
-          </h1>
-          <p className={classes.leftPText}>
-            Earn up to 10% cashback on certain brands, and soon actively earn % on liquidity pools!
-          </p>
+      <div className={classes.topPortion}>
+        <div className={classes.Card}>
+          <Card>
+            <img src={HB} alt="sometext" className={classes.hBLogo} />
+          </Card>
         </div>
-        <Card>
-          <img src={UA} alt='placeholder' className={classes.rightCard} />
-        </Card>
       </div>
-      <div className={classes.arrowR}>
-        <ChevronRightIcon />
+
+      <div className={classes.initialStores}>
+        <div className={classes.productsBox}>
+          <div className={classes.productsContainer}>
+            {products.map((item) => (
+              <div
+                onClick={() => openInNewTab("https://google.com")}
+                className={classes.Container}
+              >
+                <div className={classes.Circle}>
+                  <img
+                    src={item.img}
+                    key={item.id}
+                    className={classes.Image}
+                    alt="none"
+                  />
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
