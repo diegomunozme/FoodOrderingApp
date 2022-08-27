@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.18b72281.css",
+    "main.js": "/static/js/main.e1c07f89.js",
+    "static/media/synthwaveArt.jpg": "/static/media/synthwaveArt.f5dff68bfb976f988724.jpg",
+    "static/media/JCPenney.png": "/static/media/JCPenney.38179da90e8b7d9461c9.png",
+    "static/media/hbLogo.jpg": "/static/media/hbLogo.745c1466f7be17cdda44.jpg",
+    "static/media/Walmart.jpg": "/static/media/Walmart.5ba6a667c2b20163e3e6.jpg",
+    "static/media/Target.jpg": "/static/media/Target.dfcb01b427ea245d851b.jpg",
+    "static/media/ebay.jpg": "/static/media/ebay.88009d0f949cc09f8b0a.jpg",
+    "index.html": "/index.html",
+    "main.18b72281.css.map": "/static/css/main.18b72281.css.map",
+    "main.e1c07f89.js.map": "/static/js/main.e1c07f89.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.18b72281.css",
+    "static/js/main.e1c07f89.js"
+  ]
+}
